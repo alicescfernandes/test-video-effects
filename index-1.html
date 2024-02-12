@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>CodePen - Video Blur Demo (Content with DRM)</title>
+		<link rel="stylesheet" href="./style-1.css" />
+	</head>
+	<body>
+		<!-- partial:index.partial.html -->
+		<head>
+			<!-- Shaka Player compiled library: -->
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.js"
+				integrity="sha512-K0vnbY/0ZJ+TRetnq8EK9ge2au+MBu7L1gjfiJiQlpGOmPh/qlJudl7IA2cUmvlFmSQqlJ49+wr8aw3S1vb/yQ=="
+				crossorigin="anonymous"
+				referrerpolicy="no-referrer"
+			></script>
+			<style>
+				pre {
+					white-space: pre-wrap; /* css-3 */
+					white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+					white-space: -pre-wrap; /* Opera 4-6 */
+					white-space: -o-pre-wrap; /* Opera 7 */
+					word-wrap: break-word; /* Internet Explorer 5.5+ */
+				}
+			</style>
+			<!-- Your application source: -->
+		</head>
+		<body>
+			<h1>Applying CSS blur on Video with DRM</h1>
+			<br />
+
+			<video
+				muted
+				controls
+				autoplay
+				id="video"
+				width="640"
+				poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+				controls
+				autoplay
+			></video>
+
+			<div id="blured">
+				<p>Text</p>
+			</div>
+		</body>
+		<!-- partial -->
+		<script src="./script-1.js"></script>
+	</body>
+</html>
