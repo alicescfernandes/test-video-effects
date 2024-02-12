@@ -2,7 +2,7 @@ body{
   margin:0;
 }
 :root{
-  --background-materialDefault01:#1D1E20
+  --background-materialDefault01:rgba(29, 30, 32, 0.94)
 }
 #blured{
   padding:20px;
@@ -47,6 +47,7 @@ iframe {
 body{;
   height:100vh
 }
+
 #zoom{
-  zoom:0.8
+  zoom:0.9
 }
