@@ -14,11 +14,25 @@ body{
   
   width:400px;
   height:200px;
+
+  backdrop-filter: blur(50px);
+}
+
+#blured2{
+  padding:20px;
+  position:absolute;
+  top:200px;
+  left:150px;
+  color:white;
+  border:4px solid red;
+  
+  width:400px;
+  height:200px;
   // backdrop-filter:blur(80px);
   //background: rgba(255,0,0, 0.0);
 
   background: var(--background-materialDefault01, linear-gradient(0deg, #8C8C8C 0%, #8C8C8C 100%), rgba(37, 37, 37, 0.82));
-  mix-blend-mode: overlay;
+  // mix-blend-mode: overlay;
   // background-blend-mode: overlay, normal;
   /* blur/material */
 
@@ -26,5 +40,6 @@ body{
 }
 
 iframe {
-  border:none
+  border:none;
+  overflow:hidden;
 }
