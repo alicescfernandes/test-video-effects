@@ -1,6 +1,9 @@
 body{
   margin:0;
 }
+:root{
+  --background-materialDefault012:#1D1E20
+}
 #blured{
   padding:20px;
   position:absolute;
@@ -15,7 +18,8 @@ body{
   //background: rgba(255,0,0, 0.0);
 
   background: var(--background-materialDefault01, linear-gradient(0deg, #8C8C8C 0%, #8C8C8C 100%), rgba(37, 37, 37, 0.82));
-  background-blend-mode: overlay, normal;
+  mix-blend-mode: overlay;
+  // background-blend-mode: overlay, normal;
   /* blur/material */
 
   backdrop-filter: blur(50px);
