@@ -43,3 +43,10 @@ iframe {
   border:none;
   overflow:hidden;
 }
+
+body{;
+  height:100vh
+}
+#zoom{
+  zoom:0.8
+}
