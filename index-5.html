@@ -8,10 +8,15 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
+		<script type="text/javascript"></script>
 		<!-- have a button POST a click via AJAX -->
+		<h1>Browser: <span id="b"></span></h1>
 		<h1>Hardware Accellaration: <span id="stuff"></span></h1>
 		<script>
+			var parser = new UAParser();
+			var result = parser.getResult();
+			console.log(result);
 			const detectHardwareAcceleration = (() => {
 				// create a test function for both "default" drawing and forced software
 				const test = (force = false) => {
@@ -27,6 +32,7 @@
 			})();
 
 			document.getElementById('stuff').innerText = detectHardwareAcceleration;
+			document.getElementById('b').innerText = `${result.browser.name} ${result.browser.version} on ${result.os.name} ${result.os.version}`;
 		</script>
 	</body>
 </html>
