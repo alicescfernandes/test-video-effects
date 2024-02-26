@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>test</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+		<!-- have a button POST a click via AJAX -->
+		<h1>Hardware Accellaration: <span id="stuff"></span></h1>
+		<script>
+			const detectHardwareAcceleration = (() => {
+				// create a test function for both "default" drawing and forced software
+				const test = (force = false) => {
+					const canvas = new OffscreenCanvas(200, 200);
+					// willReadFrequently will force software rendering
+					const ctx = canvas.getContext('2d', { willReadFrequently: force });
+					ctx.moveTo(0, 0), ctx.lineTo(120, 121); // HWA is bad at obliques
+					ctx.stroke();
+					return ctx.getImageData(0, 0, 200, 200).data.join();
+				};
+				// check that both return different results
+				return test(true) !== test(false);
+			})();
+
+			document.getElementById('stuff').innerText = detectHardwareAcceleration;
+		</script>
+	</body>
+</html>
+l
